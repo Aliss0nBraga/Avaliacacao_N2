@@ -1,0 +1,26 @@
+main {
+	width: 80vw;
+	margin: 0 auto;
+}
+label {
+	font-weight: bold;
+	display: block;
+}
+button[type="submit"] {
+	display: block;
+	padding: 0.8rem;
+	background-color: #712ab4;
+	color: white;
+	border: none;
+	border-radiu: 3px;
+}
+
+input[type="text"],
+input[type="number"] {
+	width: 80vw;
+	height:2rem;
+	border-radius:3px;
+	border: none;
+	background-color: rgba(113,42,180,0.5);
+	margin: 0.5rem 0;
+}

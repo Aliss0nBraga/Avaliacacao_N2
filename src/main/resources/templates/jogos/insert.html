@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset+"UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Cadastre seu jogo</title>
+	<link rel="stylesheet" th:href="@{/css/root.css}">
+	<link rel="stylesheet" th:href="@{/css/menu.css}">
+	<link rel="stylesheet" th:href="@{/css/form.css}">
+</head>
+
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="/">home</a></li>
+				<li><a href="jogos/list">Cadastrar novo jogo</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		form
+		action="#"
+		th:action="@{/jogos/insert}"
+		method="post"
+		th:object="${book}"
+
+		<label for="txtNome">nome</label>
+		<input type="text" th: field="*{nome}" reqired />
+		<label for="txtCompatibilidade">Compatibildade</label>
+		<input type="text" th: field="*{compatibilidade}" reqired />
+		<label for="txtValor">Valor</label>
+		<input type="text" th: field="*{Valor}" reqired />
+		<label for="txtUnidades">Unidades</label>
+		<input type="text" th: field="*{Unidades}" reqired />
+		<label for="txtEditora">Editora</label>
+		<input type="text" th: field="*{Editora}" reqired />
+		<button type="submit">Salvar</button>
+		</form>
+	</main>
+</body>
+
+</html>

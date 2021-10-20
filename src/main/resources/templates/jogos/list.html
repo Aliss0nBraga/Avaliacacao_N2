@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Cadastre seu jogo</title>
+    <link rel="stylesheet" th:href="@{/css/root.css}" />
+    <link rel="stylesheet" th:href="@{/css/menu.css}" />
+    <link rel="stylesheet" th:href="@{/css/table.css}" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/jogos/forminsert">Cadastrar novo jogo</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="box">
+      <table>
+        <thead>
+          <th scope="col">#</th>
+          <th scope="col">nome</th>
+          <th scope="col">Compatibilidade</th>
+          <th scope="col">valor</th>
+          <th scope="col">unidades</th>
+          <th scope="col">Editora</th>
+        </thead>
+        <tbody>
+          <tr th:each="jogo : ${jogos}">
+            <td th:text="${jogo.id}"></td>
+            <td th:text="${jogo.nome}"></td>
+            <td th:text="${jogo.compatibilidade}"></td>
+            <td th:text="${jogo.valor}"></td>
+            <td th:text="${jogo.unidades}"></td>
+            <td th:text="${jogo.editora}"></td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>
